@@ -20,9 +20,7 @@ public class Main {
         secondPlace.showRentInformation();
 
         System.out.println(" ");
-        if (firstPlace.rentPerMonth < secondPlace.rentPerMonth) {
-            System.out.println("*На Проспекте Римского-Корсакова дороже аренда но больше проходимость, выбираем Адмиралтейский район");
-        }
+        System.out.println(firstPlace.rentPerMonth < secondPlace.rentPerMonth ? "*На Проспекте Римского-Корсакова дороже аренда но больше проходимость, выбираем Адмиралтейский район" : "Если в адмиралтейском районе еще и дешевле будет, то лучше варианта я вообше не вижу");
         System.out.println(" ");
         System.out.println("*ПОДСЧЁТЫ ПО РЕНТЕ ЗАВЕРШЕНЫ*");
 
@@ -82,7 +80,7 @@ public class Main {
 
         System.out.println(" ");
         Profit.countExpencesPerMonth(secondPlace.rentPerMonth, barista.salaryPerMonth + cleaner.salaryPerMonth);
-        System.out.println(" Суммарная прибыль от продажи кофе за месяц: " + (Coffee.revenueArabica + Coffee.revenueRobusta + Coffee.revenueLiberica));
+        System.out.println("Суммарная прибыль от продажи кофе за месяц: " + (Coffee.revenueArabica + Coffee.revenueRobusta + Coffee.revenueLiberica));
         Profit.countProfitPerMonth(Coffee.revenueArabica, Coffee.revenueRobusta, Coffee.revenueLiberica);
         System.out.println (Profit.profit > 0 ? "Поздравляю, мы вышли в плюс, но нам ещё есть над чем подумать для максимилизации прибыли" : "К сожалению мы вышли в минус, надо пересмотреть нашу стратегию");
 
